@@ -29,12 +29,15 @@ cors_proxy.createServer({
     'cookie',
     'cookie2',
     // Strip Heroku-specific headers
-    'x-heroku-queue-wait-time',
-    'x-heroku-queue-depth',
-    'x-heroku-dynos-in-use',
     'x-request-start',
-    // Strinp X-Frame-Options
-    'x-frame-options',
+    'x-request-id',
+    'via',
+    'connect-time',
+    'total-route-time',
+    // Other Heroku added debug headers
+    // 'x-forwarded-for',
+    // 'x-forwarded-proto',
+    // 'x-forwarded-port',
   ],
   redirectSameOrigin: true,
   httpProxyOptions: {
