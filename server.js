@@ -28,6 +28,8 @@ cors_proxy.createServer({
   removeHeaders: [
     'cookie',
     'cookie2',
+    // Allow embedding any iframe
+    'x-frame-options',
     // Strip Heroku-specific headers
     'x-request-start',
     'x-request-id',
